@@ -1,21 +1,18 @@
-# sanjogprasad.com — Setup and Deploy Guide
+# sanjogprasad.com: Setup and Deploy Guide
 
 This is a plain HTML/CSS/JS site. No build tools, no framework. That makes it fast
 and simple to deploy on Vercel.
 
-Before you go live, do a find-and-replace across all files for these two placeholders:
+Before you go live, a couple of things to finish:
 
-- `910000000000` — replace with the real WhatsApp number (with country code, no + or spaces)
-- `+910000000000` — replace with the real phone number for the Call button (used in `tel:` links)
-- `hello@sanjogprasad.com` — replace with the real email if different
-
-Also replace the two photo placeholder boxes (marked `photo-slot` in the HTML) with real
-`<img>` tags once you have the photos, and swap in a real favicon if you want something
-other than the simple "SP" mark.
+- WhatsApp and Call number: already set to +91 89206 31606 across the whole site (WhatsApp links, Call buttons, and the sticky bottom bar). No further action needed unless the number changes.
+- Brand partner logos: the homepage has a scrolling logo strip ("Brands I'm currently working with") using placeholder boxes labelled "Brand Logo". In `index.html`, find the section commented `CURRENT BRAND PARTNERS` and replace each `<div class="logo-chip">Brand Logo</div>` with either the brand name as text, or an `<img>` tag pointing to the logo file (recommended: transparent PNG or SVG, roughly 160x70px, all logos should be a similar visual weight so the strip looks even). The list is duplicated once in the code (two identical blocks) so the loop is seamless. Keep both blocks identical when you add real logos.
+- Photos: replace the two placeholder boxes (marked `photo-slot` in the HTML) with real `<img>` tags once you have Sanjog's photos, matching the pose notes written inside each box.
+- Email: `hello@sanjogprasad.com` is used in the footer, update if a different address should be used.
 
 ---
 
-## Part 1 — One-time setup on your MacBook
+## Part 1: One-time setup on your MacBook
 
 Open the **Terminal** app (Cmd + Space, type "Terminal", hit Enter) and run these one at a time.
 
@@ -66,7 +63,7 @@ when it opens.
 
 ---
 
-## Part 2 — Get the project onto your Mac
+## Part 2: Get the project onto your Mac
 
 1. Unzip the project file you downloaded from Claude (`sanjogprasad-site.zip`) into
    your Documents folder, or wherever you keep projects.
@@ -84,7 +81,7 @@ code .
 
 ---
 
-## Part 3 — Push it to GitHub
+## Part 3: Push it to GitHub
 
 Still in Terminal, inside the `sanjogprasad-site` folder:
 
@@ -120,9 +117,9 @@ git push -u origin main
 
 ---
 
-## Part 4 — Deploy to Vercel
+## Part 4: Deploy to Vercel
 
-### Option A — Vercel dashboard (easiest, no install needed)
+### Option A: Vercel dashboard (easiest, no install needed)
 
 1. Go to [vercel.com](https://vercel.com) and sign up using your GitHub account.
 2. Click **Add New → Project**.
@@ -131,7 +128,7 @@ git push -u origin main
 5. Leave build settings empty and click **Deploy**.
 6. In under a minute you'll get a live URL like `sanjogprasad-com.vercel.app`.
 
-### Option B — Vercel CLI (from Terminal)
+### Option B: Vercel CLI (from Terminal)
 
 ```bash
 npm install -g vercel
@@ -144,7 +141,7 @@ folder settings). It will give you a live URL when done.
 
 ---
 
-## Part 5 — Connect your custom domain (sanjogprasad.com)
+## Part 5: Connect your custom domain (sanjogprasad.com)
 
 1. In the Vercel dashboard, open your project → **Settings → Domains**.
 2. Add `sanjogprasad.com` and `www.sanjogprasad.com`.
