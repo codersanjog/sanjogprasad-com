@@ -833,6 +833,34 @@ p.lead{ font-size: 1.15rem; color: var(--ink); max-width: 56ch; }
   .logo-track{ animation: none; }
 }
 
+/* ---------- Real results (numeric proof) ---------- */
+.result-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.result-card{
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--orange);
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+  padding: 28px 30px;
+}
+.result-num{
+  font-family: var(--font-head);
+  font-weight: 900;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  color: var(--navy);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+.result-num .plus{ color: var(--orange-dark); }
+.result-num .arrow{ color: var(--orange-dark); font-weight: 700; margin: 0 4px; }
+.result-label{ margin-top: 10px; font-size: 0.95rem; color: var(--ink-soft); max-width: 34ch; }
+@media (max-width: 700px){
+  .result-grid{ grid-template-columns: 1fr; }
+}
+
 /* ---------- Utility ---------- */
 .center{ text-align: center; }
 .mt-0{ margin-top: 0; }
