@@ -16,8 +16,9 @@
   --line: #D5D9D9;
   --bg-soft: #F7F8F8;
 
-  --font-head: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-head: "Fraunces", Georgia, "Times New Roman", serif;
   --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", "SF Mono", Menlo, monospace;
 
   --maxw: 1120px;
   --gap: 24px;
@@ -64,14 +65,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 h1,h2,h3,h4{
   font-family: var(--font-head);
   color: var(--navy);
-  line-height: 1.08;
+  line-height: 1.12;
   margin: 0 0 16px;
-  font-weight: 800;
-  letter-spacing: -0.01em;
+  font-weight: 600;
+  letter-spacing: -0.015em;
 }
-h1{ font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 900; }
-h2{ font-size: clamp(1.7rem, 3.2vw, 2.4rem); }
-h3{ font-size: 1.25rem; }
+h1{ font-size: clamp(2.3rem, 5vw, 3.8rem); font-weight: 600; }
+h2{ font-size: clamp(1.8rem, 3.2vw, 2.5rem); font-weight: 600; }
+h3{ font-size: 1.3rem; font-weight: 600; }
 
 p{ margin: 0 0 16px; max-width: 62ch; color: var(--ink-soft); }
 p.lead{ font-size: 1.15rem; color: var(--ink); max-width: 56ch; }
@@ -95,22 +96,26 @@ p.lead{ font-size: 1.15rem; color: var(--ink); max-width: 56ch; }
 }
 
 .tag{
-  display: inline-block;
-  font-family: var(--font-body);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--orange-dark);
-  background: #FFF3E0;
-  border: 1px solid #FFD98C;
-  border-radius: var(--radius-pill);
-  padding: 5px 14px;
   margin-bottom: 18px;
 }
-.section-dark .tag{
-  color: var(--gold);
-  background: rgba(254,189,105,0.1);
-  border-color: rgba(254,189,105,0.35);
+.tag::before{
+  content: "";
+  width: 26px;
+  height: 2px;
+  background: var(--orange);
+  flex: 0 0 auto;
 }
+.section-dark .tag{ color: var(--gold); }
+.section-dark .tag::before{ background: var(--gold); }
 
 /* ---------- Buttons ---------- */
 .btn{
@@ -236,7 +241,7 @@ p.lead{ font-size: 1.15rem; color: var(--ink); max-width: 56ch; }
   align-items: center;
 }
 .hero h1{ color: var(--paper); }
-.hero h1 .accent{ color: var(--orange); }
+.hero h1 .accent{ color: var(--orange); font-style: italic; font-weight: 500; }
 .hero p.lead{ color: #C7CCCC; }
 
 .photo-accent{ position: relative; }
@@ -271,7 +276,7 @@ p.lead{ font-size: 1.15rem; color: var(--ink); max-width: 56ch; }
   text-align: center;
 }
 .hero-years .n{ font-family: var(--font-head); font-weight: 900; font-size: 2.4rem; color: var(--navy); }
-.hero-years .t{ font-size: 0.58rem; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.02em; margin-top: 3px; line-height: 1.25; }
+.hero-years .t{ font-family: var(--font-mono); font-size: 0.56rem; font-weight: 600; color: var(--navy); text-transform: uppercase; letter-spacing: 0.02em; margin-top: 3px; line-height: 1.25; }
 
 @media (max-width: 880px){
   .hero-grid{ grid-template-columns: 1fr; }
@@ -318,11 +323,11 @@ p.lead{ font-size: 1.15rem; color: var(--ink); max-width: 56ch; }
 }
 .ticker-item:last-child{ border-right: none; }
 .ticker-item .k{
-  font-family: var(--font-head);
-  font-weight: 900;
-  font-size: 1.05rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.98rem;
   color: var(--orange);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
 }
 .ticker-item .v{ font-size: 0.78rem; color: #B7BDBD; }
 
@@ -347,9 +352,9 @@ p.lead{ font-size: 1.15rem; color: var(--ink); max-width: 56ch; }
 }
 .ledger-row:hover{ border-color: var(--orange); background: var(--bg-soft); }
 .ledger-row .no{
-  font-family: var(--font-head);
-  font-weight: 900;
-  font-size: 1.3rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 1.15rem;
   color: var(--orange);
 }
 .ledger-row h3{ margin-bottom: 8px; }
@@ -426,10 +431,10 @@ p.lead{ font-size: 1.15rem; color: var(--ink); max-width: 56ch; }
   border-bottom: 1px solid var(--line);
 }
 .step .no{
-  font-family: var(--font-head);
-  font-weight: 900;
+  font-family: var(--font-mono);
+  font-weight: 600;
   color: var(--orange);
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   display: block;
   margin-bottom: 10px;
 }
