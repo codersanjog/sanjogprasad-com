@@ -15,7 +15,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
 
@@ -48,7 +48,7 @@
 
 <header class="site-header">
   <div class="wrap nav-row">
-    <a href="index.html" class="logo">SANJOG <span>PRASAD</span></a>
+    <a href="index.html" class="logo"><span class="logo-mark">S</span>SANJOG <span>PRASAD</span></a>
     <nav>
       <ul class="nav-links" id="navLinks">
         <li><a href="#why">Why Me</a></li>
@@ -70,6 +70,7 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero">
+  <div class="hero-ghost-word" aria-hidden="true">AMAZON</div>
   <div class="wrap hero-grid">
     <div>
       <p class="greeting">Hi, I'm Sanjog</p>
@@ -89,15 +90,19 @@
       </div>
     </div>
 
-    <div class="hero-photo-wrap photo-accent">
-      <div class="hero-years">
-        <span class="n" data-counter-target="10" data-counter-duration="1200">10</span>
-        <span class="t">Years on<br>Amazon</span>
-      </div>
+    <div class="hero-arch-wrap">
+      <span class="sticker-tag sticker-1">Amazon Ads</span>
+      <span class="sticker-tag sticker-2">Full Funnel</span>
       <img src="assets/sanjog-portrait.png" alt="Sanjog Prasad, Amazon Growth Partner" class="hero-photo">
-      <div class="hero-float-stat">
-        <span class="fig">&#8377;<span data-counter-target="50" data-counter-suffix="L+" data-counter-duration="1400">50L+</span></span>
-        <span class="lbl">Highest monthly sales<br>managed on Amazon</span>
+      <div class="hero-stat-stack">
+        <div class="hero-stat-card">
+          <span class="lbl">Years on<br>Amazon</span>
+          <span class="num"><span data-counter-target="10" data-counter-duration="1200">10</span>+</span>
+        </div>
+        <div class="hero-stat-card">
+          <span class="lbl">Highest Monthly<br>Sales Managed</span>
+          <span class="num">&#8377;<span data-counter-target="50" data-counter-suffix="L+" data-counter-duration="1400">50L+</span></span>
+        </div>
       </div>
     </div>
   </div>
@@ -474,7 +479,7 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <a href="index.html" class="logo">SANJOG <span>PRASAD</span></a>
+        <a href="index.html" class="logo"><span class="logo-mark">S</span>SANJOG <span>PRASAD</span></a>
         <p style="color:#8A9090;margin-top:14px;">Amazon Growth Partner. Helping brands launch, run and scale on Amazon, in India and beyond.</p>
       </div>
       <div>
