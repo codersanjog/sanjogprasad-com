@@ -539,6 +539,55 @@ p.lead{ font-size: 1.15rem; color: var(--ink); max-width: 56ch; }
   .split.reverse .col-photo{ order: -1; }
 }
 
+/* ---------- Secure account access ---------- */
+.access-visual{
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+  padding: 56px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  text-align: center;
+}
+.access-caption{
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--navy);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.access-list{
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+}
+.access-list li{
+  position: relative;
+  padding: 10px 0 10px 28px;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+.access-list li:last-child{ border-bottom: none; }
+.access-list li::before{
+  content: "\2713";
+  position: absolute;
+  left: 0; top: 10px;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--navy);
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* ---------- Global expansion strip ---------- */
 .flags-row{
   display: flex;
@@ -961,7 +1010,7 @@ p.lead{ font-size: 1.15rem; color: var(--ink); max-width: 56ch; }
 /* ---------- Real results (numeric proof) ---------- */
 .result-grid{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
 .result-card{
@@ -982,7 +1031,10 @@ p.lead{ font-size: 1.15rem; color: var(--ink); max-width: 56ch; }
 .result-num .plus{ color: var(--orange-dark); }
 .result-num .arrow{ color: var(--orange-dark); font-weight: 700; margin: 0 4px; }
 .result-label{ margin-top: 10px; font-size: 0.95rem; color: var(--ink-soft); max-width: 34ch; }
-@media (max-width: 700px){
+@media (max-width: 900px){
+  .result-grid{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 560px){
   .result-grid{ grid-template-columns: 1fr; }
 }
 
