@@ -1,4 +1,4 @@
-# sanjogprasad.com: Setup and Deploy Guide
+# theamazonmanager.com: Setup and Deploy Guide
 
 This is a plain HTML/CSS/JS site. No build tools, no framework. That makes it fast
 and simple to deploy on Vercel.
@@ -6,9 +6,7 @@ and simple to deploy on Vercel.
 Before you go live, a couple of things to finish:
 
 - WhatsApp and Call number: already set to +91 89206 31606 across the whole site (WhatsApp links, Call buttons, and the sticky bottom bar). No further action needed unless the number changes.
-- Brand partner logos: the homepage has a scrolling logo strip ("Brands I'm currently working with") using placeholder boxes labelled "Brand Logo". In `index.html`, find the section commented `CURRENT BRAND PARTNERS` and replace each `<div class="logo-chip">Brand Logo</div>` with either the brand name as text, or an `<img>` tag pointing to the logo file (recommended: transparent PNG or SVG, roughly 160x70px, all logos should be a similar visual weight so the strip looks even). The list is duplicated once in the code (two identical blocks) so the loop is seamless. Keep both blocks identical when you add real logos.
-- Photos: replace the two placeholder boxes (marked `photo-slot` in the HTML) with real `<img>` tags once you have Sanjog's photos, matching the pose notes written inside each box.
-- Email: `hello@sanjogprasad.com` is used in the footer, update if a different address should be used.
+- Brand logos: the scrolling strip on the homepage uses the 8 logo files in `assets/brands/`. Every file is the same size (360x120, white on transparent) so all logos look equal. To add a brand, make a file the same way, add an `<img class="brand-logo">` line in both copies of the list in `index.html` (the second copy is there for the seamless loop), and keep both copies identical.
 
 ---
 
@@ -88,7 +86,7 @@ Still in Terminal, inside the `sanjogprasad-site` folder:
 ```bash
 git init
 git add .
-git commit -m "Initial commit: sanjogprasad.com website"
+git commit -m "Initial commit: theamazonmanager.com website"
 ```
 
 Now create the GitHub repo and push in one step using the GitHub CLI:
@@ -141,14 +139,15 @@ folder settings). It will give you a live URL when done.
 
 ---
 
-## Part 5: Connect your custom domain (sanjogprasad.com)
+## Part 5: Connect your custom domain (theamazonmanager.com)
 
 1. In the Vercel dashboard, open your project → **Settings → Domains**.
-2. Add `sanjogprasad.com` and `www.sanjogprasad.com`.
-3. Vercel will show you DNS records (usually an A record and a CNAME record).
-4. Go to wherever you bought the domain (GoDaddy, Namecheap, Google Domains, etc.),
+2. Add `theamazonmanager.com` and `www.theamazonmanager.com`.
+3. If sanjogprasad.com should also work, add it in the same place and set it to redirect to theamazonmanager.com.
+4. Vercel will show you DNS records (usually an A record and a CNAME record).
+5. Go to wherever you bought the domain (GoDaddy, Namecheap, Google Domains, etc.),
    open DNS settings, and add the records Vercel gave you.
-5. DNS changes can take anywhere from a few minutes to a few hours to go live.
+6. DNS changes can take anywhere from a few minutes to a few hours to go live.
    Vercel will show a green checkmark once it detects the domain is connected,
    and will issue a free HTTPS certificate automatically.
 
