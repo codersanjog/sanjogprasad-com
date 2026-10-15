@@ -962,6 +962,15 @@ p.lead{ font-size: 1.15rem; color: var(--ink); max-width: 56ch; }
   background: #FFF4E3;
 }
 .shot img{ width: 100%; height: auto; display: block; }
+.case-private{
+  width: 140px; min-height: 47px;
+  border: 1px dashed rgba(255,255,255,0.3);
+  border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 6px 10px;
+  font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-soft);
+  text-transform: uppercase; letter-spacing: 0.04em;
+}
 .case-logo{ width: 140px; height: auto; display: block; }
 
 /* Case study screenshot slot (real Amazon dashboard captures are light,
