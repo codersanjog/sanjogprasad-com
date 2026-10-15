@@ -947,6 +947,17 @@ p.lead{ font-size: 1.15rem; color: var(--ink); max-width: 56ch; }
 .dash-mock .dash-legend i{ width: 10px; height: 10px; display: inline-block; }
 
 
+/* Real case study screenshot */
+.shot{
+  margin-top: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: #FFF4E3;
+}
+.shot img{ width: 100%; height: auto; display: block; }
+.case-logo{ width: 140px; height: auto; display: block; }
+
 /* Case study screenshot slot (real Amazon dashboard captures are light,
    so this placeholder stays light to preview them accurately) */
 .shot-slot{
