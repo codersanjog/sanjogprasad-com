@@ -5,7 +5,7 @@ and simple to deploy on Vercel.
 
 Before you go live, a couple of things to finish:
 
-- WhatsApp and Call number: already set to +91 89206 31606 across the whole site (WhatsApp links, Call buttons, and the sticky bottom bar). No further action needed unless the number changes.
+- WhatsApp and Call number: already set to +91 92112 27123 across the whole site (WhatsApp links, Call buttons, and the sticky bottom bar). No further action needed unless the number changes.
 - Brand logos: the scrolling strip on the homepage uses the 8 logo files in `assets/brands/`. Every file is the same size (360x120, white on transparent) so all logos look equal. To add a brand, make a file the same way, add an `<img class="brand-logo">` line in both copies of the list in `index.html` (the second copy is there for the seamless loop), and keep both copies identical.
 
 ---
